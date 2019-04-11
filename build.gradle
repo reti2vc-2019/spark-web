@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'it.uniupo.reti2'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'com.sparkjava:spark-core:2.8.0'
+    implementation 'com.sparkjava:spark-template-handlebars:2.7.1'
+    implementation 'org.slf4j:slf4j-simple:1.7.26'
+    // not needed for the JS-only version
+    implementation 'org.springframework:spring-web:5.1.5.RELEASE'
+    // not needed for the JS-only version
+    implementation 'com.google.code.gson:gson:2.8.5'
+}

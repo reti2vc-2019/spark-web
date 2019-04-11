@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tasks Manager WebApp</title>
+    {{>head.hbs}}
+</head>
+
+<body>
+
+<h1>Task List</h1>
+
+{{#with tasks.[0]}}
+<p>This is the first task: "{{ description }}" and it's {{#unless urgent }} not {{/unless}} urgent.</p>
+{{/with}}
+
+<div>
+    <ul>
+    {{#each tasks}}
+        <li>{{description}}</li>
+    {{/each}}
+    </ul>
+</div>
+
+</body>
+</html>
